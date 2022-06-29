@@ -374,3 +374,87 @@ nav a:hover {
         box-shadow: none;
     }
 }
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .menu-btn {
+        display: block;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+
+    .menu-btn:hover {
+        color: #eee;
+    }
+
+    .brand,
+    .menu-btn {
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        background: #161616;
+        width: 100%;
+        z-index: 0;
+        height: 0;
+        overflow-y: hidden;
+        transition: 0.6s ease-in-out;
+
+    }
+
+    /* Open class for JS */
+    .menu-open {
+        height: 17em;
+        padding: 5em 0 1em 0;
+    }
+
+    .menu li {
+        display: block;
+        margin: 1em 0;
+    }
+
+    .specs ul {
+        width: 80vw;
+    }
+
+    .infos,
+    .info,
+    .stats {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .infos {
+        gap: 3em;
+    }
+
+    .info img {
+        margin: 0 0 1em 0;
+    }
+
+    .panels,
+    .panels-sm {
+        grid-template-columns: 1fr;
+    }
+
+    .panel,
+    .panel-lg {
+        min-height: 15em;
+    }
+
+    .panel:nth-child(2) {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
